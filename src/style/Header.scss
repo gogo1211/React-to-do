@@ -1,101 +1,67 @@
-header {
-  top: 0px;
-  position: sticky;
+.header {
+  background-color: white;
+  line-height: 70px;
+  padding: 0px 60px;
+  height: 70px;
+  color: #232323;
+  font-weight: 500;
+  position: relative;
   text-transform: uppercase;
-  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.4);
-
-  .header-top {
-    padding: 0 60px;
-    background-color: #7c4dff;
-    display: flex;
-    justify-content: space-between;
-    line-height: 50px;
-
-    .mailbox {
-      display: flex;
-      align-items: center;
-      color: white;
-      text-decoration: none;
-      
-      i {
-        margin-right: 8px;
-        font-size: 28px;
-      }
-      &:hover {
-        opacity: 0.8;
-      }
-    }
-    .icons {
-      font-size: 20px;
-      text-decoration: none;
-      color: white;
-
-      i{
-        margin: 0 12px;
-
-        &:hover {
-          opacity: 0.5;
-        }
-      }
-    }
+  box-shadow: 0 1px 6px rgba(0,0,0,.3);
+  &__title {
+    font-size: 28px;
+    font-family: 'Raleway', sans-serif;
+    float: left;
   }
-  .header-bottom {
-    padding: 0 60px;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    line-height: 70px;
-    font-weight: 500;
-    box-sizing: border-box;
-    background-color: white;
-
-    .logo {
-      font-family: 'Raleway', sans-serif;
-      font-size: 28px;
-    }
-    .navbar {
-      padding: 0;
-      ul {
-        list-style-type: none;
-        margin: 0;
-        box-sizing: border-box;
-      }
+  &__btn-action {
+    position: absolute;
+    bottom: -30px;
+    right: 60px;
+    z-index: 99;
+    background-color: $primary-color;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: white;
+    font-size: 32px;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    line-height: 60px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,.13), 0 6px 10px rgba(0,0,0,.3);
+  }
+  &__btn-menu {
+    display: none;
+    float: right;
+    text-decoration: none;
+    margin-right: 110px;
+  }
+  .nav-main {
+    float: right;
+    padding-right: 50px;
+    .list-unstyled {
+      padding-left: 0px;
+      list-style: none;
+      margin-top: 0px;
+      margin-bottom: 10px;
       li {
-        float: left;
-        box-sizing: border-box;
-        &:first-child a {
-          border-bottom:  5px solid #7c4dff
-        } 
-      }
-      li a {
-        display: block;
-        color: black;
-        font-weight: 500;
-        text-align: center;
-        padding: 0 16px;
-        text-decoration: none;
-
-        &:hover, &:active{
-          border-bottom:  5px solid #7c4dff
+        padding: 0px;
+        display: inline-block;
+        margin-left: -4px;
+        margin-bottom: 0px;
+        a {
+          padding: 0 20px;
+          display: inline-block;
+          line-height: 70px;
+          height: 70px;
+          border-bottom: 5px solid transparent;
+        }
+        a:hover,
+        .active {
+          border-color: $primary-color;
+          text-decoration: none;
         }
       }
-    }
-    .burger {
-      display: none;
-    }
-    .btn-plus {
-      position: absolute;
-      display: flex;
-      font-size: 30px;
-      width: 60px;
-      height: 60px;
-      background-color: #7c4dff;
-      color: white;
-      border-radius: 50%;
-      justify-content: center;
-      align-items: center;
-      bottom: -30px;
-      right: 30px;
     }
   }
 }

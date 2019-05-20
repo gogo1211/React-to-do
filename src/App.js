@@ -1,10 +1,13 @@
 import React from 'react';
-import './style/App.scss';
+import {BrowserRouter as Router} from 'react-router-dom'
+
 import Main from './components/Main';
 
 function App() {
   return (
-    <Main />
+    <Router>
+      <Main />
+    </Router>
   );
 }
 
