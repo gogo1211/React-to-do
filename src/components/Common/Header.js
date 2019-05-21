@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 class Header extends React.Component {
   render() {
+    console.log(this.props);
     return (
       <div className="header">
         <div className="header__title"><a>Sility</a></div>
@@ -11,7 +12,7 @@ class Header extends React.Component {
         <nav className="nav-main">
           <ul className="list-unstyled">
             <li>
-              <NavLink to={ '/home' } activeClassName="active">
+              <NavLink exact to={ '/' } activeClassName="active">
                 Home
               </NavLink>
             </li>
@@ -20,9 +21,17 @@ class Header extends React.Component {
                 About
               </NavLink>
             </li>
-            <li><a>Skill</a></li>
+            <li>
+              <NavLink to={ '/skill' } activeClassName="active">
+                Skill
+              </NavLink>
+            </li>
             <li><a>Experience</a></li>
-            <li><a>Education</a></li>
+            <li>
+              <NavLink to={ '/education' } activeClassName="active">
+                Education
+              </NavLink>
+            </li>
             <li><a>Work</a></li>
             <li><a>Blog</a></li>
             <li><a>Contact</a></li>

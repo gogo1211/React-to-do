@@ -11,8 +11,8 @@ class Home extends React.Component {
             in Web and UX design. I am worked on a variety of brands
             and with agencies both big and small.</p>
           <div className="btn-container">
-            <a className="btn btn__white">Hire Me Now</a>
-            <a className="btn btn__purple">Download CV</a>
+            <a href="/" className="btn btn__white">Hire Me Now</a>
+            <a href="/" className="btn btn__purple">Download CV</a>
           </div>
         </div>
         <div className="col-md-5 img-section">

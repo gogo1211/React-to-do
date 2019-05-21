@@ -5,16 +5,21 @@ import Header from './Common/Header';
 import Footer from './Common/Footer';
 import Home from './Home';
 import AboutMe from './AboutMe';
+import Skill from './Skill';
+import Education from './Education';
 
 class Main extends React.Component {
   render() {
+    console.log(this.props);
     return (
       <div>
         <Header></Header>
         <Switch>
-          <Route path="/aboutme" component={ AboutMe }/>
-          <Route path="/home" component={ Home }/>
-          <Route render={() => <Redirect to="/home"/>}/>
+          <Route path="/aboutme" component={ AboutMe } />
+          <Route path="/skill" component={ Skill } />
+          <Route path="/education" component={ Education } />
+          <Route path="/" component={ Home } />
+          <Route render={() => <Redirect to="/"/>} />
         </Switch>
         <Footer></Footer>
       </div>
