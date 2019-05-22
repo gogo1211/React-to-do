@@ -1,5 +1,8 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
+import { withRouter } from 'react-router';
+
+import CustomLink from './CustomLink';
 
 class Header extends React.Component {
   render() {
@@ -12,19 +15,13 @@ class Header extends React.Component {
         <nav className="nav-main">
           <ul className="list-unstyled">
             <li>
-              <NavLink exact to={ '/' } activeClassName="active">
-                Home
-              </NavLink>
+              <CustomLink name="Home" target="/"></CustomLink>
             </li>
             <li>
-              <NavLink to={ '/aboutme' } activeClassName="active">
-                About
-              </NavLink>
+              <CustomLink name="About" target="/aboutme"></CustomLink>
             </li>
             <li>
-              <NavLink to={ '/skill' } activeClassName="active">
-                Skill
-              </NavLink>
+              <CustomLink name="Skill" target="/skill"></CustomLink>
             </li>
             <li><a>Experience</a></li>
             <li>
@@ -42,4 +39,4 @@ class Header extends React.Component {
   }
 }
 
-export default Header;
+export default withRouter(Header);
