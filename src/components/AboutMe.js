@@ -2,6 +2,8 @@ import React from 'react';
 
 class AboutMe extends React.Component {
   render() {
+    console.log(this.props);
+    const { profile } = this.props;
     return (
       <div className="section-AboutMe">
         <div className="container">
@@ -11,7 +13,7 @@ class AboutMe extends React.Component {
               <img src="man02.png" className="section-AboutMe__image" alt="man" />
             </div>
             <div className="col-md-9 info-section">
-              <h4 className="info-section__name">Benjamin Thomson</h4>
+              <h4 className="info-section__name">{ profile.profile.name }</h4>
               <h5>Web &amp; UX Designer</h5>
               <p>Ultricies nisi voluptatem, illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo nemo enim ipsam voluptatem. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque latu dantium, totam rem aperiam, eaque ipsa quae ab illo tempor dignissim at. </p>
               <div className="signature"><img src="sign.png" alt="signature" className="img-responsive" /></div>

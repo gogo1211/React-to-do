@@ -4,7 +4,7 @@ import { Switch, Redirect, Route } from 'react-router-dom';
 import Header from './Common/Header';
 import Footer from './Common/Footer';
 import Home from './Home';
-import AboutMe from './AboutMe';
+import AboutMe from '../containers/AboutMe';
 import Skill from './Skill';
 import Education from './Education';
 
